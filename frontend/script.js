@@ -76,7 +76,7 @@ signupForm.addEventListener("submit", function(e) {
   const name = document.getElementById("signup-name").value.trim();
   const email = document.getElementById("signup-email").value.trim();
   const password = document.getElementById("signup-password").value.trim();
-  fetch("http://localhost:7000/api/auth/signup", {
+  fetch("http://192.168.29.66:7000/api/auth/signup", {
     method: "POST",
     headers: {"Content-Type": "application/json"},
     body: JSON.stringify({ name, email, password })
@@ -99,7 +99,7 @@ loginForm.addEventListener("submit", function(e) {
   e.preventDefault();
   const email = document.getElementById("login-email").value.trim();
   const password = document.getElementById("login-password").value.trim();
-  fetch("http://localhost:7000/api/auth/login", {
+  fetch("http://192.168.29.66:7000/api/auth/login", {
     method: "POST",
     headers: {"Content-Type": "application/json"}, 
     body: JSON.stringify({ email, password })
@@ -125,7 +125,7 @@ let isLoggedIn = !!token;
 
 // it's fetch workouts if logged in
 if (isLoggedIn) {
-  fetch("http://localhost:7000/api/workouts", {
+  fetch("http://192.168.29.66:7000/api/workouts", {
     headers: { Authorization: `Bearer ${token}` }
   })
   .then(res => res.json())
@@ -154,7 +154,7 @@ document.getElementById("addWorkout").addEventListener("click", function () {
       displayGroupedWorkouts(groupByDate(guestWorkouts));
       showAlert("⚠ Your workouts will only be saved if you log in!");
     } else {
-      fetch("http://localhost:7000/api/workouts", {
+      fetch("http://192.168.29.66:7000/api/workouts", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -164,7 +164,7 @@ document.getElementById("addWorkout").addEventListener("click", function () {
       })
       .then(res => res.json())
       .then(() => {
-        fetch("http://localhost:7000/api/workouts", {
+        fetch("http://192.168.29.66:7000/api/workouts", {
           headers: { Authorization: `Bearer ${token}` }
         })
         .then(res => res.json())
