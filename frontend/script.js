@@ -1,6 +1,8 @@
 // 3-dot menu dropdown 
 function toggleMenu() {
-  document.getElementById("menuDropdown").classList.toggle("show");
+  const dropdown = document.getElementById("menuDropdown");
+  const isShown = dropdown.classList.toggle("show");
+  document.body.classList.toggle("menu-open", isShown); 
 }
 window.onclick = function(e) {
   if (!e.target.matches('.menu-icon')) {
@@ -8,6 +10,7 @@ window.onclick = function(e) {
     for (let i = 0; i < dropdowns.length; i++) {
       if (dropdowns[i].classList.contains('show')) {
         dropdowns[i].classList.remove('show');
+        document.body.classList.remove('menu-open'); // this will prevent body scrolling
       }
     }
   }

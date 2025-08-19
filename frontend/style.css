@@ -94,7 +94,6 @@ li {
 
 
 .menu-container {
-  
   position: absolute;
   top: 15px;
   left: 20px;
@@ -110,43 +109,72 @@ li {
   box-shadow: 0 0 6px rgba(0, 231, 255, 0.25);
   transition: all 0.25s ease;
   color: #00e7ff;
+  position: fixed;
+   z-index: 1001;
 }
 
 .dropdown {
-  display: none;
-  position: absolute;
-  left: 20px;
-  top: 60px;
-  background: #222;
-  border-radius: 10px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
-  padding: 10px;
-  z-index: 1000;;
+  position: fixed;
+  top: 0;
+  left: -280px;
+  height: 100vh;
+  width: 280px;
+  background: linear-gradient(180deg, #1a1a1a 0%, #0f0f0f 100%);
+  border-right: 2px solid rgba(0, 231, 255, 0.3);
+  box-shadow: 5px 0 25px rgba(0, 0, 0, 0.5);
+  transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1000;
+  overflow-y: auto;
+  padding: 0;
 }
 
+
+
 .dropdown a {
-  display: block;
-  padding: 10px 15px;
+
+  display: flex;
+  align-items: center;
+  padding: 18px 25px;
   font-size: 16px;  
   font-weight: normal;
   color: white;
   text-decoration: none;
-  transition: background 0.3s;
-  border-radius: 6px;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 
 .dropdown a:hover {
   background: #3a3a3a;
+   border-left: 3px solid #00e7ff;
 }
 
 .dropdown.show {
-  display:block;
-
-  
+  left: 0;
 }
 
+.menu-header {
+            background: rgba(0, 231, 255, 0.1);
+            padding: 30px 20px;
+            border-bottom: 2px solid rgba(0, 231, 255, 0.2);
+            text-align: center;
+        }
 
+        .menu-title {
+            color: #00e7ff;
+            font-size: 22px;
+            font-weight: 600;
+            font-style: italic;
+            margin: 0;
+        }
+
+        .menu-subtitle {
+            color: #888;
+            font-size: 12px;
+            margin-top: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
 
 .alert-popup {
     position: fixed;
@@ -250,14 +278,21 @@ html {
   }
 
   .dropdown {
-    min-width: 90px;
-    max-width: 140px;
-    width: 65vw;
-    padding: 0;
-    right: 0;
-    top: 36px;
+    width: 260px;
+    left: -260px;
+  }
+  .container {
+    margin: 20px 10px;
+    padding: 15px;
   }
 
+
+  body.menu-open {
+    overflow: hidden;
+    position: fixed; 
+    width: 100vw;
+}
+ 
   .dropdown a {
     font-size: 20px;   
     padding: 6px 6px;
