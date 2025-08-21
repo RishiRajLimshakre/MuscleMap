@@ -93,7 +93,7 @@ signupForm.addEventListener("submit", function(e) {
   updateMenuLinks();
 })
   .catch(() => showAlert("Signup error!"));
-});
+});  
 // Login API
 loginForm.addEventListener("submit", function(e) {
   e.preventDefault();
