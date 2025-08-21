@@ -1,14 +1,14 @@
 const User = require("../models/user");
 
-// Helper function to format date as dd-MMM-yyyy
+// Helper function to format date as dd-MMM-yyyy 
 function formatDate(date) {
-    const day = String(date.getDate()).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0'); 
     const month = date.toLocaleString('en-US', { month: 'short' });
     const year = date.getFullYear();
     return `${day}-${month}-${year}`;
 }
 
-// Add Workout
+// Add Workout 
 exports.addWorkout = async (req, res) => {
     try {
         const { name, sets, reps, weight } = req.body;
