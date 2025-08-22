@@ -1,7 +1,7 @@
 
 const API_BASE = window.location.hostname === "localhost" || window.location.hostname.startsWith("192.")
   ? "http://192.168.29.66:7000"   // local dev
-  : "";                           // production (same domain as frontend)
+  : "https://musclemap-11b3.onrender.com";                            // production (same domain as frontend)
 
 
 
