@@ -253,3 +253,9 @@ function showAlert(message) {
     alertBox.remove();
   }, 3000);
 }
+
+//my footer
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('currentYear').textContent = new Date().getFullYear();
+});
+ 
