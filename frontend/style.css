@@ -259,6 +259,21 @@ li {
   color: #fff;
 }
 
+/* Add this to your CSS */
+.footer {
+  background-color: #1e1e1e;
+  color: #00e7ff;
+  text-align: center;
+  padding: 15px 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9em;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+
+
 html {
   -webkit-text-size-adjust: 100%;
 }
@@ -324,3 +339,8 @@ html {
     font-weight: 500;
   }
 }
+
+.footer {
+    font-size: 0.8em;
+    padding: 12px 8px;
+  }
