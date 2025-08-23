@@ -222,7 +222,7 @@ function displayGroupedWorkouts(grouped) {
     dateHeader.textContent = date;
     workoutList.appendChild(dateHeader);
     grouped[date].forEach(w => {
-      if (Array.isArray(w.exercises)) {
+      if (Array.isArray(w.exercises)) { 
         w.exercises.forEach(ex => {
           let listItem = document.createElement("li");
           listItem.classList.add("workout-item");

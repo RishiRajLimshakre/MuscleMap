@@ -84,13 +84,6 @@ These instructions will help you set up MuscleMap locally for development and te
 - JavaScript, HTML, and CSS for frontend
 - Render for deployment
 
-## Contributing
-
-I welcome contributions! If you want to help improve MuscleMap, please fork the repository and submit a pull request. Here’s how you can contribute:
-
-- Report issues and bugs.
-- Suggest new features or improvements.
-- Submit code enhancements or fixes.
 
 ## License
 
