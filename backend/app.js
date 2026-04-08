@@ -24,6 +24,10 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../frontend/index.html'));
 });
 
+app.get("/health", (req, res) => {
+  res.status(200).send("OK");
+}); 
+
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/workouts', require('./routes/workout'));
 
